@@ -5,7 +5,7 @@ RUN apt update \
  && apt clean all
 
 RUN cd /root \
- && https://github.com/rustdesk/rustdesk-server/releases/download/1.1.12/rustdesk-server-linux-amd64.zip >> /dev/null \
+ && curl https://github.com/rustdesk/rustdesk-server/releases/download/1.1.12/rustdesk-server-linux-amd64.zip -o rustdesk-server-linux-amd64.zip \
  && unzip rustdesk-server-linux-amd64.zip \
  && rm -rf rustdesk-server-linux-amd64.zip
  
